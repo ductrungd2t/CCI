@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CCI MEDICAL TECHNOLOGY</title>
+  <meta name="description" content="Trang giới thiệu công ty và danh mục bộ dụng cụ." />
+  <link rel="preload" href="assets/css/style.css" as="style" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"><img src="img/logo.png" alt="Logo"></div>
+      <a href="#bo-suu-tap" class="cta">Danh mục bộ dụng cụ</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img src="img/logo.png" alt="Logo">
+    <h1>CCI MEDICAL TECHNOLOGY</h1>
+    <p>Chúng tôi chuyên cung cấp và phát triển thiết bị, dụng cụ y tế tiên tiến. Chọn bộ dụng cụ bên dưới để xem chi tiết.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="brown-wrap" id="bo-suu-tap">
+    <main class="container">
+      <h2 class="section-title">Danh mục Bộ Dụng Cụ</h2>
+      <div id="kitCards" class="grid"></div>
+      <div id="kitPanels"></div>
+    </main>
+  </section>
+
+  <footer><p>© <span id="y"></span> CCI MEDICAL TECHNOLOGY. All rights reserved.</p></footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog">
+    <button class="lightbox__close" id="lightboxClose">×</button>
+    <img class="lightbox__img" id="lightboxImg" alt="Preview" />
+  </div>
+
+  <script>window.__BRAND__ = {
+    primary: "#d89b1f",
+    brown: "#6b3b17",
+    brownDark: "#4f2b10"
+  };</script>
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
