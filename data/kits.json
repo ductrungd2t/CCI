@@ -10,7 +10,7 @@
     {
       "id": 1,
       "title": "BỘ DỤNG CỤ PHẪU THUẬT MŨI BDQ-I (ZO1000)",
-      "cardImage": "img/kit1.png",
+      "cardImage": "img/BDQ-I (ZO1000)/kit1.png",
       "detailImages": [
         "img/BDQ-I (ZO1000)/BDQ-I (ZO1000)_1.jpg",
         "img/BDQ-I (ZO1000)/BDQ-I (ZO1000)_2.jpg",
@@ -50,12 +50,15 @@
     },
     {
       "id": 2,
-      "title": "Bộ Dụng Cụ 2",
-      "cardImage": "img/kit2.jpg",
+      "title": "Bộ dụng cụ phẫu thuật cắt amidan BQC-I (ZO680)",
+      "cardImage": "img/BQC-I (ZO680)/kit2.jpg",
       "detailImages": [
-        "img/kit2-detail-1.jpg",
-        "img/kit2-detail-2.jpg",
-        "img/kit2-detail-3.jpg"
+        "img/BQC-I (ZO680)/BQC-I (ZO680)_1.png",
+        "img/BQC-I (ZO680)/BQC-I (ZO680)_2.png",
+        "img/BQC-I (ZO680)/BQC-I (ZO680)_3.png",
+        "img/BQC-I (ZO680)/BQC-I (ZO680)_4.png",
+        "img/BQC-I (ZO680)/BQC-I (ZO680)_5.png",
+        "img/BQC-I (ZO680)/BQC-I (ZO680)_6.png"
       ],
       "items": [
         {
