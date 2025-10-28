@@ -178,47 +178,50 @@
 })();
 
 
-
 // ---------- FORM SUBMIT TO GOOGLE SHEETS ----------
-(function(){
+(function () {
   const FORM = document.getElementById('infoForm');
-  if(!FORM) return;
+  if (!FORM) return;
 
-  // ĐIỀN URL Apps Script của bạn vào đây:
+  // URL Web App (phải là /exec)
   const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyweHCOvcxC0_3q_6Cn7fIJL9tm6J8JZfGHzOX8qkrSyeC0MVg4WGcKp7LMAwiYNbHn9A/exec';
-  
-
   const MSG = document.getElementById('formMsg');
 
-  FORM.addEventListener('submit', async (e)=>{
+  FORM.addEventListener('submit', async (e) => {
     e.preventDefault();
+
+    // (tuỳ chọn) kiểm tra ràng buộc nhanh
+    if (!FORM.name.value.trim() || !FORM.phone.value.trim() || !FORM.unit.value.trim()) {
+      MSG.textContent = 'Vui lòng điền đủ thông tin.';
+      return;
+    }
+
     MSG.textContent = 'Đang gửi...';
+    const btn = FORM.querySelector('button[type="submit"]');
+    btn && (btn.disabled = true);
 
     const fd = new URLSearchParams();
     fd.append('name',  (FORM.name.value  || '').trim());
     fd.append('phone', (FORM.phone.value || '').trim());
     fd.append('unit',  (FORM.unit.value  || '').trim());
 
-    // Gửi ở dạng application/x-www-form-urlencoded để tránh preflight CORS
-    try{
-      const res = await fetch(SCRIPT_URL, {
-        method:'POST',
-        headers:{ 'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8' },
-        body: fd.toString(),
+    try {
+      await fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors', // <<< quan trọng để tránh CORS
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+        body: fd.toString()
       });
 
-      // Không cần đọc nhiều, chỉ cần báo thành công
-      if(res.ok){
-        MSG.textContent = 'Cảm ơn bạn! Thông tin đã được ghi nhận.';
-        FORM.reset();
-      }else{
-        MSG.textContent = 'Gửi chưa thành công. Vui lòng thử lại.';
-      }
-    }catch(err){
+      // Nếu chạy được tới đây là request đã gửi đi cho Apps Script
+      MSG.textContent = 'Cảm ơn bạn! Thông tin đã được ghi nhận.';
+      FORM.reset();
+    } catch (err) {
       MSG.textContent = 'Lỗi kết nối. Vui lòng thử lại.';
       console.error(err);
+    } finally {
+      btn && (btn.disabled = false);
     }
   });
 })();
-
 
