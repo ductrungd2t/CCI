@@ -92,12 +92,12 @@
     },
     {
       "id": 3,
-      "title": "Bộ Dụng Cụ 3",
-      "cardImage": "img/kit3.jpg",
+      "title": "Bộ dụng cụ phẫu thuật họng HX-II (ZO1225)",
+      "cardImage": "img/HX-II (ZO1225)/kit3.jpg",
       "detailImages": [
-        "img/kit3-detail-1.jpg",
-        "img/kit3-detail-2.jpg",
-        "img/kit3-detail-3.jpg"
+        "img/HX-II (ZO1225)/HX-II (ZO1225)_1.png",
+        "img/HX-II (ZO1225)/HX-II (ZO1225)_2.png",
+        "img/HX-II (ZO1225)/HX-II (ZO1225)_3.png"
       ],
       "items": [
         {
