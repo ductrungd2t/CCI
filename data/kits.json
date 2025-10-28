@@ -170,12 +170,14 @@
     },
     {
       "id": 5,
-      "title": "Bộ Dụng Cụ 5",
-      "cardImage": "img/kit5.jpg",
+      "title": "Bộ dụng cụ phẫu thuật nội soi xoang (ZO4027)",
+      "cardImage": "img/FESS SET (ZO4027)/kit5.png",
       "detailImages": [
-        "img/kit5-detail-1.jpg",
-        "img/kit5-detail-2.jpg",
-        "img/kit5-detail-3.jpg"
+        "img/FESS SET (ZO4027)/FESS SET (ZO4027)_1.png",
+        "img/FESS SET (ZO4027)/FESS SET (ZO4027)_2.png",
+        "img/FESS SET (ZO4027)/FESS SET (ZO4027)_3.png",
+        "img/FESS SET (ZO4027)/FESS SET (ZO4027)_4.png",
+        "img/FESS SET (ZO4027)/FESS SET (ZO4027)_5.png"
       ],
       "items": [
         {
