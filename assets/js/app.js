@@ -208,10 +208,11 @@
     try {
       await fetch(SCRIPT_URL, {
       method: 'POST',
-      mode: 'no-cors', // <<< quan trọng để tránh CORS
-      headers: { 'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8' },
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
       body: fd.toString()
     });
+
 
       // Nếu chạy được tới đây là request đã gửi đi cho Apps Script
       MSG.textContent = 'Cảm ơn bạn! Thông tin đã được ghi nhận.';
