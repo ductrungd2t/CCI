@@ -185,7 +185,7 @@
   if(!FORM) return;
 
   // ĐIỀN URL Apps Script của bạn vào đây:
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwF0AlOEcY1jfjStDyr0cTrl31OiZ6sYp8onieOZDCX/dev';
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyweHCOvcxC0_3q_6Cn7fIJL9tm6J8JZfGHzOX8qkrSyeC0MVg4WGcKp7LMAwiYNbHn9A/exec';
   
 
   const MSG = document.getElementById('formMsg');
