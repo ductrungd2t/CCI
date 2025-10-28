@@ -183,46 +183,44 @@
   const FORM = document.getElementById('infoForm');
   if (!FORM) return;
 
-  // URL Web App (phải là /exec)
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw1zyv8ENMZA-YB-kwFwt5VQX2kGPpx2FUXURoN9WLk_J-Y8hml9jAuhxeRW7rwHiOe/exec';
+  // Dán URL Web App (kết thúc bằng /exec)
+  const SCRIPT_URL = 'PASTE_YOUR_EXEC_URL_HERE';
   const MSG = document.getElementById('formMsg');
 
   FORM.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // (tuỳ chọn) kiểm tra ràng buộc nhanh
-    if (!FORM.name.value.trim() || !FORM.phone.value.trim() || !FORM.unit.value.trim()) {
-      MSG.textContent = 'Vui lòng điền đủ thông tin.';
-      return;
-    }
+    // ràng buộc cực gọn
+    const n = (FORM.name.value  || '').trim();
+    const p = (FORM.phone.value || '').trim();
+    const u = (FORM.unit.value  || '').trim();
+    if (!n || !p || !u) { MSG.textContent = 'Vui lòng điền đủ thông tin.'; return; }
 
     MSG.textContent = 'Đang gửi...';
-    const btn = FORM.querySelector('button[type="submit"]');
-    btn && (btn.disabled = true);
+    const btn = FORM.querySelector('button[type="submit"]'); 
+    if (btn) btn.disabled = true;
 
-    const fd = new URLSearchParams();
-    fd.append('name',  (FORM.name.value  || '').trim());
-    fd.append('phone', (FORM.phone.value || '').trim());
-    fd.append('unit',  (FORM.unit.value  || '').trim());
+    const body = new URLSearchParams({ name: n, phone: p, unit: u }).toString();
 
     try {
+      // POST + no-cors để tránh CORS block của Apps Script
       await fetch(SCRIPT_URL, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
-      body: fd.toString()
-    });
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+        body
+      });
 
-
-      // Nếu chạy được tới đây là request đã gửi đi cho Apps Script
+      // Nếu tới được đây là request đã gửi đi
       MSG.textContent = 'Cảm ơn bạn! Thông tin đã được ghi nhận.';
       FORM.reset();
     } catch (err) {
+      console.error('Submit error:', err);
       MSG.textContent = 'Lỗi kết nối. Vui lòng thử lại.';
-      console.error(err);
     } finally {
-      btn && (btn.disabled = false);
+      if (btn) btn.disabled = false;
     }
   });
 })();
+
 
