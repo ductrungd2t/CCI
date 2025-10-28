@@ -184,7 +184,7 @@
   if (!FORM) return;
 
   // URL Web App (phải là /exec)
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyweHCOvcxC0_3q_6Cn7fIJL9tm6J8JZfGHzOX8qkrSyeC0MVg4WGcKp7LMAwiYNbHn9A/exec';
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw1zyv8ENMZA-YB-kwFwt5VQX2kGPpx2FUXURoN9WLk_J-Y8hml9jAuhxeRW7rwHiOe/exec';
   const MSG = document.getElementById('formMsg');
 
   FORM.addEventListener('submit', async (e) => {
