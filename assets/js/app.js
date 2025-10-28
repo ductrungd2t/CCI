@@ -176,3 +176,48 @@
 
     });
 })();
+
+
+
+// ---------- FORM SUBMIT TO GOOGLE SHEETS ----------
+(function(){
+  const FORM = document.getElementById('infoForm');
+  if(!FORM) return;
+
+  // ĐIỀN URL Apps Script của bạn vào đây:
+  const SCRIPT_URL = 'https://script.google.com/u/0/home/projects/1i655LB5fNiVNKJHXUfakFlO6SNBdUxxZ9hu6i42JvkG21pr8oRWr8Hqg/edit';
+
+  const MSG = document.getElementById('formMsg');
+
+  FORM.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    MSG.textContent = 'Đang gửi...';
+
+    const fd = new URLSearchParams();
+    fd.append('name',  (FORM.name.value  || '').trim());
+    fd.append('phone', (FORM.phone.value || '').trim());
+    fd.append('unit',  (FORM.unit.value  || '').trim());
+
+    // Gửi ở dạng application/x-www-form-urlencoded để tránh preflight CORS
+    try{
+      const res = await fetch(SCRIPT_URL, {
+        method:'POST',
+        headers:{ 'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8' },
+        body: fd.toString(),
+      });
+
+      // Không cần đọc nhiều, chỉ cần báo thành công
+      if(res.ok){
+        MSG.textContent = 'Cảm ơn bạn! Thông tin đã được ghi nhận.';
+        FORM.reset();
+      }else{
+        MSG.textContent = 'Gửi chưa thành công. Vui lòng thử lại.';
+      }
+    }catch(err){
+      MSG.textContent = 'Lỗi kết nối. Vui lòng thử lại.';
+      console.error(err);
+    }
+  });
+})();
+
+
