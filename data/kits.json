@@ -92,12 +92,13 @@
     },
     {
       "id": 3,
-      "title": "Bộ dụng cụ phẫu thuật họng HX-II (ZO1225)",
+      "title": "Bộ dụng cụ phẫu thuật hạ họng thanh quản HX-II (ZO1225)",
       "cardImage": "img/HX-II (ZO1225)/kit3.png",
       "detailImages": [
         "img/HX-II (ZO1225)/HX-II (ZO1225)_1.png",
         "img/HX-II (ZO1225)/HX-II (ZO1225)_2.png",
-        "img/HX-II (ZO1225)/HX-II (ZO1225)_3.png"
+        "img/HX-II (ZO1225)/HX-II (ZO1225)_3.png",
+        "img/HX-II (ZO1225)/HX-II (ZO1225)_4.png"
       ],
       "items": [
         {
@@ -131,12 +132,13 @@
     },
     {
       "id": 4,
-      "title": "Bộ Dụng Cụ 4",
-      "cardImage": "img/kit4.jpg",
+      "title": "Bộ Dụng Cụ vi phẫu tai EKX-Ⅳ (ZO4000)",
+      "cardImage": "img/EKX-Ⅳ (ZO4000)/kit4.png",
       "detailImages": [
-        "img/kit4-detail-1.jpg",
-        "img/kit4-detail-2.jpg",
-        "img/kit4-detail-3.jpg"
+        "img/EKX-Ⅳ (ZO4000)/EKX-Ⅳ (ZO4000)_1.png",
+        "img/EKX-Ⅳ (ZO4000)/EKX-Ⅳ (ZO4000)_2.png",
+        "img/EKX-Ⅳ (ZO4000)/EKX-Ⅳ (ZO4000)_3.png",
+        "img/EKX-Ⅳ (ZO4000)/EKX-Ⅳ (ZO4000)_4.png"
       ],
       "items": [
         {
@@ -168,16 +170,68 @@
         }
       ]
     },
+
     {
       "id": 5,
-      "title": "Bộ dụng cụ phẫu thuật nội soi xoang (ZO4027)",
+      "title": "Bộ dụng cụ thuật nội soi mũi xoang (ZO4027)",
       "cardImage": "img/FESS SET (ZO4027)/kit5.png",
       "detailImages": [
         "img/FESS SET (ZO4027)/FESS SET (ZO4027)_1.png",
         "img/FESS SET (ZO4027)/FESS SET (ZO4027)_2.png",
         "img/FESS SET (ZO4027)/FESS SET (ZO4027)_3.png",
         "img/FESS SET (ZO4027)/FESS SET (ZO4027)_4.png",
-        "img/FESS SET (ZO4027)/FESS SET (ZO4027)_5.png"
+        "img/FESS SET (ZO4027)/FESS SET (ZO4027)_5.png",
+        "img/FESS SET (ZO4027)/FESS SET (ZO4027)_6.png"
+      ],
+      "items": [
+        {
+          "no": 1,
+          "article": "Z0555RN",
+          "name": "Polypus scissors",
+          "desc": "120, tubular, <em>straight</em>",
+          "qty": 1,
+          "unit": "PC",
+          "image": "img/Z0555RN.png"
+        },
+        {
+          "no": 2,
+          "article": "Z0556RN",
+          "name": "Polypus scissors",
+          "desc": "120, tubular, <em>left curved</em>",
+          "qty": 1,
+          "unit": "PC",
+          "image": "img/Z0556RN.png"
+        },
+        {
+          "no": 3,
+          "article": "Z0557RN",
+          "name": "Polypus forceps",
+          "desc": "120, tubular, <em>right curved</em>",
+          "qty": 1,
+          "unit": "PC",
+          "image": "img/Z0557RN.png"
+        }
+      ]
+    },
+
+
+    {
+      "id": 6,
+      "title": "Hệ thống phẫu thuật nội soi bàng quang 4K",
+      "cardImage": "img/SHINVA HTPTNS/kit5.png",
+      "detailImages": [
+        "img/SHINVA HTPTNS/BROCHURE - SHINVA HTPTNS 4K_1.png",
+        "img/SHINVA HTPTNS/BROCHURE - SHINVA HTPTNS 4K_2.png",
+        "img/SHINVA HTPTNS/BROCHURE - SHINVA HTPTNS 4K_3.png",
+        "img/SHINVA HTPTNS/BROCHURE - SHINVA HTPTNS 4K_4.png",
+        "img/SHINVA HTPTNS/BROCHURE - SHINVA HTPTNS 4K_5.png",
+        "img/SHINVA HTPTNS/BROCHURE - SHINVA HTPTNS 4K_6.png",
+        "img/SHINVA HTPTNS/BROCHURE - SHINVA HTPTNS 4K_7.png",
+        "img/SHINVA HTPTNS/BROCHURE - SHINVA HTPTNS 4K_8.png",
+        "img/SHINVA HTPTNS/BROCHURE - SHINVA HTPTNS 4K_9.png",
+        "img/SHINVA HTPTNS/BROCHURE - SHINVA HTPTNS 4K_10.png",
+        "img/SHINVA HTPTNS/BROCHURE - SHINVA HTPTNS 4K_11.png",
+        "img/SHINVA HTPTNS/BROCHURE - SHINVA HTPTNS 4K_12.png"
       ],
       "items": [
         {
