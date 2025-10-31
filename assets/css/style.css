@@ -116,3 +116,28 @@ table.cci .img img{width:110px;height:auto;cursor:zoom-in;filter:grayscale(20%)}
 }
 
 
+
+
+.catalogue-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  background: #d89b1f;
+  padding: 12px 22px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: all .25s ease;
+}
+.catalogue-btn:hover {
+  background: #b88019;
+  transform: translateY(-3px);
+}
+.catalogue-btn .caption {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #6b3b17;
+  font-weight: 700;
+}
+
+
