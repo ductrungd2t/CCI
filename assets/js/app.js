@@ -178,6 +178,47 @@
 })();
 
 
+// ---------- FORM SUBMIT TO GOOGLE SHEETS ----------
+(function () {
+  const FORM = document.getElementById('infoForm');
+  if (!FORM) return;
 
+  // Dán URL Web App (kết thúc bằng /exec)
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw1zyv8ENMZA-YB-kwFwt5VQX2kGPpx2FUXURoN9WLk_J-Y8hml9jAuhxeRW7rwHiOe/exec';
+  const MSG = document.getElementById('formMsg');
 
+  FORM.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
+    // ràng buộc cực gọn
+    const n = (FORM.name.value  || '').trim();
+    const p = (FORM.phone.value || '').trim();
+    const u = (FORM.unit.value  || '').trim();
+    if (!n || !p || !u) { MSG.textContent = 'Vui lòng điền đủ thông tin.'; return; }
+
+    MSG.textContent = 'Đang gửi...';
+    const btn = FORM.querySelector('button[type="submit"]'); 
+    if (btn) btn.disabled = true;
+
+    const body = new URLSearchParams({ name: n, phone: p, unit: u }).toString();
+
+    try {
+      // POST + no-cors để tránh CORS block của Apps Script
+      await fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+        body
+      });
+
+      // Nếu tới được đây là request đã gửi đi
+      MSG.textContent = 'Cảm ơn bạn! Thông tin đã được ghi nhận.';
+      FORM.reset();
+    } catch (err) {
+      console.error('Submit error:', err);
+      MSG.textContent = 'Lỗi kết nối. Vui lòng thử lại.';
+    } finally {
+      if (btn) btn.disabled = false;
+    }
+  });
+})();
