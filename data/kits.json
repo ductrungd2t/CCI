@@ -263,7 +263,13 @@
         }
       ]
     }
-
+    {
+"id": "dl-cci-catalogue-2025",
+"title": "Catalogue CCI (PDF) – tải trực tiếp",
+"cardImage": "img/cci-catalogue.jpg",
+"downloadDriveId": "1otKhDIrH_bvf80SNvxOiDKRTa-4RKcuH",
+"downloadName": "Catalogue_CCI.pdf"
+  }
 
   ]
 }
