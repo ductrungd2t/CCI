@@ -95,33 +95,3 @@ table.cci .img img{width:110px;height:auto;cursor:zoom-in;filter:grayscale(20%)}
   table.cci thead th, table.cci tbody td{font-size:13px;padding:8px}
 }
 
-
-
-
-
-
-/* Lead form */
-.lead-form{ background:#fff; border:1px solid #eee; border-radius:14px; padding:20px; margin:20px auto; box-shadow:var(--shadow-1);}
-.lead-title{ margin:0 0 12px; color:var(--brown); font-size:22px; }
-.lead-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; align-items:end; }
-.field{ display:flex; flex-direction:column; gap:6px; }
-.field label{ font-weight:600; color:#333; }
-.field input{
-  padding:10px 12px; border:1px solid #dcdcdc; border-radius:10px; font-size:15px;
-}
-.field input:focus{ outline:none; border-color:var(--main-orange); box-shadow:0 0 0 3px rgba(216,155,31,.15); }
-.lead-msg{ grid-column:1/-1; margin:4px 0 0; font-size:14px; color:#2b2b2b; }
-@media (max-width: 800px){
-  .lead-grid{ grid-template-columns:1fr; }
-}
-/* Card tài liệu (PDF) hiển thị trong cùng grid */
-.card.doc{ position:relative; }
-.card.doc::after{
-  content:"PDF";
-  position:absolute; top:10px; left:10px;
-  background: var(--main-orange); color:#fff; font-weight:700;
-  padding:3px 8px; border-radius:999px; font-size:12px;
-  box-shadow:0 4px 10px rgba(0,0,0,.15);
-}
-
-
