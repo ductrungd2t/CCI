@@ -114,5 +114,14 @@ table.cci .img img{width:110px;height:auto;cursor:zoom-in;filter:grayscale(20%)}
 @media (max-width: 800px){
   .lead-grid{ grid-template-columns:1fr; }
 }
+/* Card tài liệu (PDF) hiển thị trong cùng grid */
+.card.doc{ position:relative; }
+.card.doc::after{
+  content:"PDF";
+  position:absolute; top:10px; left:10px;
+  background: var(--main-orange); color:#fff; font-weight:700;
+  padding:3px 8px; border-radius:999px; font-size:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
 
 
