@@ -264,20 +264,6 @@
       ]
     }
 
-    // ===== THẺ TÀI LIỆU (PDF) — thêm vào cùng grid #kitCards =====
-// Điền FILE_ID Google Drive + ảnh cover hiển thị
-const docs = [
-  {
-    id: 'FILE_ID_1',
-    name: 'CCI Brochure (PDF)',
-    cover: 'img/pdf-cover-1.jpg'
-  },
-  {
-    id: 'FILE_ID_2',
-    name: 'Bảng giá 2025 (PDF)',
-    cover: 'img/pdf-cover-2.jpg'
-  }
-
 
   ]
 }
