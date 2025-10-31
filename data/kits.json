@@ -264,6 +264,59 @@
       ]
     }
 
+    // ===== THẺ TÀI LIỆU (PDF) — thêm vào cùng grid #kitCards =====
+// Điền FILE_ID Google Drive + ảnh cover hiển thị
+const docs = [
+  {
+    id: 'FILE_ID_1',
+    name: 'CCI Brochure (PDF)',
+    cover: 'img/pdf-cover-1.jpg'
+  },
+  {
+    id: 'FILE_ID_2',
+    name: 'Bảng giá 2025 (PDF)',
+    cover: 'img/pdf-cover-2.jpg'
+  }
+];
+
+// Tạo HTML giống hệt card bộ dụng cụ
+const docHtml = docs.map(d => `
+  <a class="card doc"
+     data-drive-id="${d.id}"
+     data-name="${d.name}"
+     href="https://drive.google.com/file/d/${d.id}/preview"
+     target="_blank" rel="noopener">
+    <img src="${d.cover}" alt="${d.name}">
+    <div class="caption">${d.name}</div>
+  </a>
+`).join('');
+
+// Gắn vào cuối grid danh mục
+cardsWrap.insertAdjacentHTML('beforeend', docHtml);
+
+// Xử lý click: tải trực tiếp từ Google Drive (không mở giao diện Drive)
+(function(){
+  const cards = document.querySelectorAll('#kitCards .card.doc');
+  const dl = id => `https://drive.google.com/uc?export=download&id=${id}`;
+
+  cards.forEach(card => {
+    const id = card.getAttribute('data-drive-id');
+    const name = card.getAttribute('data-name') || 'download.pdf';
+    if (!id) return;
+
+    card.addEventListener('click', e => {
+      e.preventDefault(); // ép tải
+      const a = document.createElement('a');
+      a.href = dl(id);
+      a.download = name;
+      a.rel = 'noopener';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    });
+  });
+})();
+
 
 
 
