@@ -25,7 +25,7 @@
            href="https://drive.google.com/uc?export=download&id=1otKhDIrH_bvf80SNvxOiDKRTa-4RKcuH"
            download="Catalogue_CCI.pdf"
            rel="noopener">
-          <img src="img/cci-catalogue.jpg" alt="Catalogue CCI (PDF)">
+          <img src="img/kit7.png" alt="Catalogue CCI (PDF)">
           <div class="caption">Catalogue CCI (PDF)</div>
         </a>
       `);
