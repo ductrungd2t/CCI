@@ -26,7 +26,7 @@
            download="Catalogue_CCI.pdf"
            rel="noopener">
           <img src="img/kit7.png" alt="Catalogue CCI (PDF)">
-          <div class="caption">Catalogue CCI (PDF)</div>
+          <div class="caption">Bộ dụng cụ phẫu thuật tai mũi họng</div>
         </a>
       `);
       
