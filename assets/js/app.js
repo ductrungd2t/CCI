@@ -18,7 +18,18 @@
           <div class="caption">${k.title}</div>
         </div>
       `).join('');
-
+      
+      // === Card tải PDF: cùng style, cùng grid, bấm để TẢI LUÔN ===
+      cardsWrap.insertAdjacentHTML('beforeend', `
+        <a class="card"
+           href="https://drive.google.com/uc?export=download&id=1otKhDIrH_bvf80SNvxOiDKRTa-4RKcuH"
+           download="Catalogue_CCI.pdf"
+           rel="noopener">
+          <img src="img/cci-catalogue.jpg" alt="Catalogue CCI (PDF)">
+          <div class="caption">Catalogue CCI (PDF)</div>
+        </a>
+      `);
+      
       // Render panels (gallery first)
       panelsWrap.innerHTML = kits.map(k => {
         const rows = (k.items||[]).map(it => `
